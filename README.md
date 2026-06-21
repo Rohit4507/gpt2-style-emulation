@@ -126,21 +126,6 @@ pip install torch transformers datasets sentence-transformers scikit-learn numpy
 
 ---
 
-## Citation
-
-If you use this repository, please cite the associated paper:
-
-```bibtex
-@article{kodgire2026gpt2style,
-  title={Fine-Tuning GPT-2 for Writing Style Replication: A Low-Resource Evaluation Framework Using Style Capacity, Confusion, and Drift Analysis},
-  author={Kodgire, Prathamesh and Dubey, Yashi and Anand, Kunal and Rajput, Rohit Singh and Dhawase, Dhammjyoti V. and Dubey, Shubh},
-  year={2026},
-  note={Preprint / Manuscript}
-}
-```
-
----
-
 ## License
 
 This project is licensed under the **Apache License 2.0**. See [`LICENSE`](./LICENSE) for details.
