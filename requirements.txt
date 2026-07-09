@@ -1,0 +1,24 @@
+# torch is intentionally NOT pinned here -- the Dockerfile installs the
+# CPU-only wheel explicitly via --index-url before this file is processed,
+# to avoid pulling the much larger CUDA build. If installing outside
+# Docker, run:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements.txt
+
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+slowapi
+transformers
+sentence-transformers
+scikit-learn
+huggingface_hub
+gradio
+requests
+matplotlib
+numpy
+
+# dev/test only
+pytest
+httpx
