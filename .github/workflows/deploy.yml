@@ -38,6 +38,10 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_SPACE_ID: ${{ vars.HF_SPACE_ID }}  # e.g. your-username/gpt2-style-emulation-demo
         run: |
+          if [ -z "${HF_TOKEN}" ] || [ -z "${HF_SPACE_ID}" ]; then
+            echo "HF_TOKEN or HF_SPACE_ID is not set; skipping deploy."
+            exit 0
+          fi
           git config --global user.email "ci-bot@example.com"
           git config --global user.name "CI Bot"
           git remote add space "https://user:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE_ID}"
